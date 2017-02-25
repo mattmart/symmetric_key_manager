@@ -56,9 +56,9 @@ class KeyManager:
         
         key = kf_contents[0].strip()
         key_length = len(key)
-        if key_length < 32:
+        if key_length < 50:
             raise KeyFormatException("Key was not appropriate length - too short!")
-        if key_length > 32:
+        if key_length > 50:
             raise KeyFormatException("Key was not appropriate length - too long!")
         return key
         
