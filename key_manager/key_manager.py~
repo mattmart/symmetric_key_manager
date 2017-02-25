@@ -1,0 +1,20 @@
+import os.path
+
+symmetric_key_file = "/tmp/tmp"
+
+def import_key():
+    _verify_file_existence(kfile)
+
+def get_api_key():
+ 
+
+def _get_api_key_from_file():
+    _verify_file_existence(symmetric_key_file)
+    key_file = open(symmetric_key_file,'r')
+
+def _verify_file_existence(kfile):
+    if os.path.exists(kfile):
+        print("file exists")
+    else:
+        print("file doesn't exist!")
+        
