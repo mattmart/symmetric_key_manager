@@ -14,8 +14,8 @@ class KeyManager:
     def import_key(self,kfile):
         """
         should *always* be called to set up the key
-        if you want your module to fast fail, call
-        this immediately upon startup.
+        if you want your module to fast fail via exception,
+        call this immediately upon startup.
         """
         self._verify_file_existence(kfile)
         self.key = self._get_api_key_from_file(kfile)
@@ -54,8 +54,6 @@ class KeyManager:
         if key_length > 32:
             raise KeyInitException("Key was not appropriate length - too long!")
         return key
-
-
         
     def _verify_file_existence(self, kfile):
         """
